@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+    <style>
+        /*.details-1 summary {
+            width: -moz-fit-content;
+            width: fit-content;!*fit-content是CSS3中给width属性新加的一个属性值,它配合margin可以让我们轻松的实现水平居中的效果;*!
+            direction: rtl;!*设置文本方式从右到左*!
+        }
+        .details-1 ::-webkit-details-marker {!*修改默认小三角的样式*!
+            direction: ltr;
+            color: gray;
+            margin-left: .5ch;
+        }
+        .details-1 ::-moz-list-bullet {
+            direction: ltr;
+            color: gray;
+            margin-left: .5ch;
+        }*/
+        /* 隐藏默认三角 */
+        /*.details-2 ::-webkit-details-marker { display: none; }
+        .details-2 ::-moz-list-bullet { font-size: 0; }*//*在火狐浏览器下display不起作用，所以用font-size来隐藏字体*/
+        /*.details-2 summary::after {
+            content: '';
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            margin: .2em 0 0 .5ch;
+            background: url(./arrow-on.svg) no-repeat;
+            background-size: 100% 100%;
+            transition: transform .2s;
+        }
+        .details-2:not([open]) summary::after {
+            margin-top: .25em;
+            transform: rotate(90deg);
+        }*/
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 2vw;
+        }
+        .show{
+            padding-bottom:20px;
+            min-width: 50vw;
+            max-width: 50vw;
+        }
+        .show h5{
+            font-size:13px;
+            line-height:20px;
+            padding:10px 0 2px 2px;
+            margin:0 0 0 8px;
+        }
+        .demo{
+            padding:10px;
+        }
+        details {
+            margin: 1rem 0;
+        }
+        details:active,
+        details:focus,
+        summary:active,
+        summary:focus{
+            outline: none 0;
+        }
+
+        ::-webkit-details-marker {
+            display: none;
+        }
+        ::-moz-list-bullet {
+            font-size: 0;
+            float: left;
+        }
+        summary {
+            user-select: none;
+            outline: 0;
+        }
+        .more {
+            display: none;
+        }
+        [open] .more {
+            display: block;
+        }
+        [open] summary a {
+            font-size: 0;
+        }
+        [open] summary a::before {
+            content: '收起';
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!--details标签在Chrome，Firefox等浏览器下默认是有展开收起行为的-->
+    <details open class="details-1"><!--如果加open属性就是默认放下的状态-->
+        <summary>
+            分类
+        </summary>
+        <p>厨房用具</p>
+        <p>洗护用品</p>
+        <p>水果</p>
+    </details>
+    <div class="show">
+        <div class="demo">
+            <details>
+                <summary>
+                    <p>据台媒报道，大陆歌手大壮的《我们不一样》近来攻占了台湾KTV排行榜冠军，在榜单上排名超过张惠妹、林俊杰的新歌名次。台湾网友评论称，太好听了，一听马上就停不下来。除了《我们不一样》外，这几首你一定听过的歌，也受到台湾歌迷的青睐。</p>
+                    <div class="more">
+                        <p>其他几首歌曲包括歌舞剧演员李玉刚的《刚好遇见你》以及王俊琪的《我多喜欢你你会知道》。</p>
+                    </div>
+                    <a>更多</a>
+                </summary>
+            </details>
+        </div>
+    </div>
+</body>
+</html>

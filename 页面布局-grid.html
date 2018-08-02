@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .layout{
+            width:100%;
+            display: grid;
+            grid-template-rows: 110px;/*设置单元格的高度*/
+            grid-template-columns: 300px auto 300px;/*设置单元格的列及每列的宽度*/
+        }
+        .left{
+            background: beige;
+        }
+        .center{
+            background: firebrick;
+        }
+        .right{
+            background: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <div class="left"></div>
+        <div class="center">此方法按照display-grid实现</div>
+        <div class="right"></div>
+    </section>
+</body>
+</html>

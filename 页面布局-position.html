@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="layout-position">
+    <style>
+        .layout-position{
+            position: relative;
+            width:100%;
+            min-height:100px;
+        }
+        .left-center-right div{
+            position:absolute;
+            min-height:100px;
+        }
+        .layout-position .left{
+            left:0;
+            width:300px;
+            background: rebeccapurple;
+        }
+        .layout-position .center{
+            left:300px;
+            background: yellow;
+            right:300px;
+        }
+        .layout-position .right{
+            right:0;
+            width:300px;
+            background: aquamarine;
+        }
+    </style>
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+            这是绝对定位的做法
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+</body>
+</html>

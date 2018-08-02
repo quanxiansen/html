@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .layout article{
+            display: table;
+            width:100%;
+            min-height: 100px;
+        }
+        .layout article div{
+            display: table-cell;
+        }
+        .left{
+            width: 300px;
+            background: red;
+        }
+        .right{
+            width:300px;
+            background: brown;
+        }
+        .center{
+            background: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <article>
+            <div class="left"></div>
+            <div class="center">这是使用display-table的方式</div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>

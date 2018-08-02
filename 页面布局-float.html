@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html *{
+            padding:0;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <style media="screen">
+            .layout div{
+                min-height:100px;
+            }
+            .layout .left{
+                float:left;
+                width:300px;
+                background: palevioletred;
+            }
+            .layout .right{
+                float: right;
+                width:300px;
+                background: deepskyblue;
+            }
+            .layout .center{
+                background: yellowgreen;
+            }
+        </style>
+       <article class="left-center-right">
+           <div class="left"></div>
+           <div class="right"></div>
+           <div class="center">左边浮动，右边浮动，中间自适应</div>
+       </article>
+    </section>
+
+</body>
+</html>

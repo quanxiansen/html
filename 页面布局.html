@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section class="layout">
+        <style>
+            .layout-float{
+                width:100%;
+                min-height: 100px;
+            }
+            .layout-float div{
+                min-height: 100px;
+            }
+            .layout-float .left{
+                float: left;
+                width:300px;
+                background: aquamarine;
+            }
+            .layout-float .center{
+                background: salmon;
+            }
+        </style>
+        <article class="layout-float">
+            <div class="left"></div>
+            <div class="center"></div>
+        </article>
+    </section>
+    <section class="layout">
+        <style>
+            .layout-position{
+                position: relative;
+            }
+            .layout-position div{
+                min-height: 100px;
+            }
+            .layout-position .left{
+                position: absolute;
+                right:300px;
+                background: deepskyblue;
+                left:0;
+            }
+            .layout-position .right{
+                position: absolute;
+                right:0;
+                width:300px;
+                background: firebrick;
+            }
+        </style>
+        <article class="layout-position">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <section class="layout">
+        <style>
+            .layout-flex{
+                display: flex;
+                min-height: 100px;
+                margin-top:110px;
+            }
+            .layout-flex .left{
+               width:300px;
+                background: hotpink;
+            }
+            .layout-flex .right{
+                flex-grow: 1;
+                background: navajowhite;
+            }
+        </style>
+        <article class="layout-flex">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <section class="layout">
+        <style>
+            .layout-table{
+                display: table;
+                width: 100%;
+                min-height: 100px;
+            }
+            .layout-table div{
+                display: table-cell;
+            }
+            .layout-table .left{
+                background: khaki;
+            }
+            .layout-table .right{
+                background: lawngreen;
+                width:300px;
+            }
+        </style>
+        <article class="layout-table">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <section class="layout">
+        <style>
+            .layout-grid{
+               display: grid;
+                grid-template-rows: 100px;
+                grid-template-columns: 300px auto;
+                width:100%;
+            }
+            .layout-grid .left{
+                background: aquamarine;
+            }
+            .layout-grid .right{
+                background: yellow;
+            }
+        </style>
+        <article class="layout-grid">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+<script>
+    //自定义事件
+    var eve=new Event('custome');
+    var ev=document.getElementsByClassName('layout-grid')[0];
+    ev.addEventListener('custome',function () {
+        console.log('aa');
+    });
+    ev.dispatchEvent(eve);
+</script>
+</body>
+</html>
